@@ -1,10 +1,17 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  // import svelteLogo from './assets/svelte.svg'
+  // import viteLogo from '/vite.svg'
+  // import Counter from './lib/Counter.svelte'
+  import TaskList from '@/components/TaskList.svelte';
 </script>
 
 <main>
+  <div class="container">
+    <TaskList />
+  </div>
+</main>
+
+<!-- <main>
   <div>
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
@@ -45,3 +52,4 @@
     color: #888;
   }
 </style>
+ -->
