@@ -1,5 +1,12 @@
+import path from 'path';
 import { defineConfig } from 'vitest/config';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+
+const resolve = {
+  alias: {
+    '@': path.resolve(__dirname, './src'),
+  },
+};
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -8,6 +15,7 @@ export default defineConfig({
   resolve: process.env.VITEST
     ? {
         conditions: ['browser'],
+        ...resolve,
       }
-    : undefined,
+    : resolve,
 });
