@@ -2,11 +2,20 @@
   // import svelteLogo from './assets/svelte.svg'
   // import viteLogo from '/vite.svg'
   // import Counter from './lib/Counter.svelte'
+  import { app } from '@/store.svelte';
+  import { Task } from '@/models/tasks';
   import TaskList from '@/components/TaskList.svelte';
+
+  const onAddTask = () => {
+    app.tasks.push(new Task('new task'));
+  };
 </script>
 
 <main>
   <div class="container">
+    <div>
+      <button onclick={onAddTask}>Add task</button>
+    </div>
     <TaskList />
   </div>
 </main>
