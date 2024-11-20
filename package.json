@@ -22,7 +22,9 @@
     "vitest": "^2.1.5"
   },
   "dependencies": {
+    "boxicons": "^2.1.4",
     "bulma": "^1.0.2",
+    "feather-icons": "^4.29.2",
     "uuid": "^11.0.3"
   }
 }
